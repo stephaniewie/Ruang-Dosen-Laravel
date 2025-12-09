@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ruang Dosen IBI Kwik Kian Gie</title>
+
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqNDsRltXOVfCdtCt8bFyn9IJKZ109sGOuHX8ewHwSLZbew50bGEInBAHWIdv6RnYS4pjJCbY80sRMCcoszpM1Tt8PJ6NrgXUv-AK3TabWvpuv8DfYnmW9M5sY41bYBGPzkNTTe_Y6PJU/s600/Institut_Bisnis_Dan_Informatika_Kwik_Kian_Gie.png"
+    >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {{-- Fonts --}}
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Lexend+Deca:300,500,400,600|DM+Sans:700|Inter:500,400");
+    </style>
+
+    {{-- Tailwind (pastikan tailwind.css ada di public folder) --}}
+    <link href="{{ asset('tailwind.css') }}" rel="stylesheet" />
+  </head>
+
+  <body class="bg-gray-50">
+
+    {{-- Tempat tampilan Blade --}}
+    <div class="container mx-auto p-6">
+        @yield('content')
+    </div>
+
+  </body>
+</html>

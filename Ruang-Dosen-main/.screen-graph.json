@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": "src/screens/Home/Home.tsx",
+      "label": "Home",
+      "routes": [
+        "/"
+      ],
+      "dataModelId": "3:5",
+      "isRoot": true
+    },
+    {
+      "id": "src/screens/Home/sections/ViewAllClasses/ViewAllClasses.tsx",
+      "label": "ViewAllClasses",
+      "routes": [
+        "/view-all-classes"
+      ]
+    },
+    {
+      "id": "src/screens/Classes/ClassesPage.tsx",
+      "label": "ClassesPage",
+      "routes": [
+        "/classes"
+      ]
+    },
+    {
+      "id": "src/screens/Home/sections/SubstituteClass/SubstituteClassPage.tsx",
+      "label": "SubstituteClassPage",
+      "routes": [
+        "/substitute-class"
+      ]
+    },
+    {
+      "id": "src/screens/ProfileDocuments/ProfileDocumentsPage.tsx",
+      "label": "ProfileDocumentsPage",
+      "routes": [
+        "/profile-documents"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "src\\screens\\Home\\sections\\MainContentSection\\MainContentSection.tsx:113:4-to-src\\screens\\Home\\sections\\ViewAllClasses\\ViewAllClasses.tsx",
+      "source": "src\\screens\\Home\\Home.tsx",
+      "target": "src\\screens\\Home\\sections\\ViewAllClasses\\ViewAllClasses.tsx",
+      "data": {
+        "viaRoute": "/view-all-classes",
+        "trigger": {
+          "element": "navigate(\"/view-all-classes\")",
+          "line": 113,
+          "endLine": 113,
+          "column": 4,
+          "endColumn": 33,
+          "sourceFile": "src\\screens\\Home\\sections\\MainContentSection\\MainContentSection.tsx"
+        }
+      }
+    },
+    {
+      "id": "src\\screens\\Home\\sections\\ViewAllClasses\\ViewAllClasses.tsx:12:4-to-src\\screens\\Home\\Home.tsx",
+      "source": "src\\screens\\Home\\sections\\ViewAllClasses\\ViewAllClasses.tsx",
+      "target": "src\\screens\\Home\\Home.tsx",
+      "data": {
+        "viaRoute": "/",
+        "trigger": {
+          "element": "navigate(\"/\")",
+          "line": 12,
+          "endLine": 12,
+          "column": 4,
+          "endColumn": 17,
+          "sourceFile": "src\\screens\\Home\\sections\\ViewAllClasses\\ViewAllClasses.tsx"
+        }
+      }
+    }
+  ]
+}
