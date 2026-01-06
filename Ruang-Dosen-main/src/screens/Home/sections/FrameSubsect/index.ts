@@ -1,1 +1,0 @@
-export { FrameSubsect } from "./FrameSubsect";

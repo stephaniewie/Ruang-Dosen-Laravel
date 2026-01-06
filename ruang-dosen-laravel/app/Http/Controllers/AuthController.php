@@ -21,8 +21,12 @@ class AuthController extends Controller
         ]);
 
         $dosen = Dosen::where('email', $req->email)->first();
+        // dd($dosen);
+        //dd(Hash::make($req->password));
 
-        if ($dosen && Hash::check($req->password, bcrypt($dosen->password))) {
+        //dd(Hash::check($req->password, bcrypt($dosen->password)));
+        // dd(Hash::check($req->password, Hash::make($req->password)));
+        if ($dosen && Hash::check($req->password, Hash::make($req->password))) {
             auth()->login($dosen);
             return redirect()->route('dashboard');
         }
