@@ -20,21 +20,27 @@ Route::middleware('auth')->group(function(){
     Route::get('/dashboard',[DashboardController::class,'index']);
 
     // Jadwal Kuliah
-    Route::resource('jadwal', JadwalController::class);
+    Route::resource('jadwal', JadwalController::class); 
+    Route::get('/jadwal', function () {
+    return view('Jadwal.index');
+})->name('jadwal.index');
 
     // Mahasiswa
-    Route::resource('mahasiswa', MahasiswaController::class);
+    Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+    Route::get('/mahasiswa', function () {
+    return view('Mahasiswa.index');
+})->name('mahasiswa.index');
 
     // Ruang Kuliah
     Route::resource('ruang', RuangKuliahController::class);
 
     // Nilai
-    Route::resource('nilai', NilaiController::class);
-    Route::get('/nilai/transkrip/{mahasiswaId}', [NilaiController::class, 'transkrip'])
-        ->name('nilai.transkrip');
+    Route::get('/nilai', function () {
+    return view('nilai.index');
+})->name('nilai.index');
 
     // Materi Kuliah
-    Route::get('/materi',[MateriKuliahController::class,'index'])->name('materi.index');
-    Route::get('/materi/create',[MateriKuliahController::class,'create'])->name('materi.create');
-    Route::post('/materi',[MateriKuliahController::class,'store'])->name('materi.store');
+    Route::get('/materi', function () {
+    return view('materi.index');
+})->name('materi.index');
 }); 
